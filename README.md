@@ -31,7 +31,11 @@ make
 
 Set up a CloudLab experiment by using the 'oct-u280-nic' profile. For this experiment, having one node is enough. This is because nodes in this profile come with both an FPGA and a NIC. However, if you want the sender and receiver on different nodes, you should use two nodes when creating the experiment.
 
-Usage
+First, set up the IP address of the NIC interface:
+
+```bash
+sudo ifconfig ens4 192.168.40.10 netmask 255.255.255.0 up
+```
 
 Start the receiver program on the receiving node:
 
@@ -45,5 +49,3 @@ $ ./udp_host_sender_if0 udp_demo_if0.xclbin <number_of_packets> <encrypt|no-encr
 ```
 ![plot](send.png)
 ![plot](recv.png)
-
-Note: On the CloudLab nodes, you can obtain the receiver IP by running ```ifconfig```. You should use the IP address of the interface ```enp175s0```.
