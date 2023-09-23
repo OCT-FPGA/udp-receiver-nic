@@ -12,6 +12,12 @@ Make sure you've got the required FPGA bitstream and the sender host executable 
 
 ## Instructions for Usage
 
+### Clone the Repository
+
+```bash
+git clone https://github.com/OCT-FPGA/udp-receiver-nic
+```
+
 ### Compiling the Receiver
 
 Install the following dependencies if required.
