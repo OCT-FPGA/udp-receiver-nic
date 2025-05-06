@@ -59,5 +59,5 @@ Finally, start the sender program on the sending (FPGA) node:
 ```bash
 $ ./udp_host_sender_if0 udp_demo_if0.xclbin <number_of_packets> <encrypt|no-encrypt> <sender IP> <receiver IP> <IP gateway>
 ```
-![plot](send.png)
-![plot](recv.png)
+![plot](send1.png)
+![plot](recv1.png)
