@@ -35,7 +35,10 @@ make
 
 ### Deployment
 
-Set up a CloudLab experiment by using the 'oct-u280-nic' profile. For this experiment, having one node is enough. This is because nodes in this profile come with both an FPGA and a NIC. However, if you want the sender and receiver on different nodes, you should use two nodes when creating the experiment.
+Set up a CloudLab experiment by using the '100g-nic' branch of the 'oct-u280' profile. 
+![plot](100g-nic.png)
+
+For this experiment, having one node is enough. This is because nodes in this profile come with both an FPGA and a NIC. However, if you want the sender and receiver on different nodes, you should use two nodes when creating the experiment.
 
 First, set up the IP address of the NIC interface:
 
