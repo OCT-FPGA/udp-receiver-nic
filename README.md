@@ -49,12 +49,12 @@ If it isn’t showing up, you’ll need to set the IP address manually.
 sudo ifconfig ens5 192.168.40.40 netmask 255.255.255.0 up
 ```
 
-Start the receiver program on the receiving node:
+Run the receiver program on the receiving node:
 
 ```bash
 $ ./receiver <number_of_packets> <decrypt|no-decrypt> 
 ```
-Finally, start the sender program on the sending (FPGA) node:
+Finally, run the sender program on the sending (FPGA) node:
 
 ```bash
 $ ./udp_host_sender_if0 udp_demo_if0.xclbin <number_of_packets> <encrypt|no-encrypt> <sender IP> <receiver IP> <IP gateway>
