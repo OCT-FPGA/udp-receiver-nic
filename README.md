@@ -40,10 +40,13 @@ Set up a CloudLab experiment by using the '100g-nic' branch of the 'oct-u280' pr
 
 For this experiment, having one node is enough. This is because nodes in this profile come with both an FPGA and a NIC. However, if you want the sender and receiver on different nodes, you should use two nodes when creating the experiment.
 
-First, set up the IP address of the NIC interface:
+Once the node has booted up, run ifconfig to verify whether the 100G interface is active. 
+![plot](ifconfig_output.png)
+
+If it isn’t showing up, you’ll need to set the IP address manually.
 
 ```bash
-sudo ifconfig ens4 192.168.40.10 netmask 255.255.255.0 up
+sudo ifconfig ens5 192.168.40.40 netmask 255.255.255.0 up
 ```
 
 Start the receiver program on the receiving node:
