@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(60000);
-    serverAddr.sin_addr.s_addr = argc < 4 ? inet_addr("192.168.40.11") : inet_addr(argv[3]);// htonl(INADDR_ANY); // Receiver IP
+    serverAddr.sin_addr.s_addr = argc < 4 ? inet_addr("192.168.40.40") : inet_addr(argv[3]);// htonl(INADDR_ANY); // Receiver IP
 
     if (bind(sockfd, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) < 0) {
         perror("Error in binding");
