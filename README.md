@@ -8,7 +8,7 @@ This repository has a C program named udp_receiver.c, which functions as a UDP p
 
 Make sure you've got the required FPGA bitstream and the sender host executable ready before setting up the experiment. You'll find the UDP sender in the [udp-network-demo](https://github.com/OCT-FPGA/udp-network-demo) repository. Just follow the instructions provided in the repository to generate the necessary bitstream and host executables.
 
-![plot](fpga-nic.png)
+![plot](fpga-nic1.png)
 
 ## Instructions for Usage
 
