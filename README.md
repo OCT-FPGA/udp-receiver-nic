@@ -2,7 +2,7 @@
 
 ## `udp_receiver.c`: Receiver for FPGA generated UDP packets
 
-This repository has a C program named udp_receiver.c, which functions as a UDP packet receiver. It is meant to receive packets sent from a U280 FPGA serving as the sender, while the host with a 100 GbE NIC serves as the receiver.
+This repository includes host code for capturing UDP packets sent from an FPGA over the network. You can use either a 40 GbE NIC or a 100 GbE NIC (available on some OCT nodes) for the experiment.
 
 ## Prerequisites
 
@@ -35,15 +35,15 @@ make
 
 ### Deployment
 
-Set up a CloudLab experiment by using the '100g-nic' branch of the 'oct-u280' profile. 
+You can use either a 40 GbE NIC or a 100 GbE NIC. All OCT nodes come with 40 GbE NICs, but only nodes pc160 through pc163 have 100 GbE NICs. If you want to use a 40 GbE NIC as the receiver, use the `oct-u280` CloudLab profile. If you want to use a 100 GbE NIC as the receiver, still use the oct-u280 profile, but switch to the 100g-nic branch.
 ![plot](profile-100g.png)
 
 For this experiment, having one node is enough. This is because nodes in this profile come with both an FPGA and a NIC. However, if you want the sender and receiver on different nodes, you should use two nodes when creating the experiment.
 
-Once the node has booted up, run ifconfig to verify whether the 100G interface is active. 
+Once the node has booted up, run ifconfig to verify whether the NIC interface is active. 
 ![plot](ifconfig_output.png)
 
-If it isn’t showing up, you’ll need to set the IP address manually.
+If it isn’t showing up, you should configure the IP address manually.
 
 ```bash
 sudo ifconfig ens5 192.168.40.40 netmask 255.255.255.0 up
