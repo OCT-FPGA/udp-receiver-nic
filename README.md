@@ -35,7 +35,8 @@ make
 
 ### Deployment
 
-You can use either a 40 GbE NIC or a 100 GbE NIC. All OCT nodes come with 40 GbE NICs, but only nodes pc160 through pc163 have 100 GbE NICs. If you want to use a 40 GbE NIC as the receiver, use the `oct-u280` CloudLab profile. If you want to use a 100 GbE NIC as the receiver, still use the oct-u280 profile, but switch to the 100g-nic branch.
+You can use either a 40 GbE NIC or a 100 GbE NIC. All OCT nodes come with 40 GbE NICs, but only nodes pc160 through pc163 have 100 GbE NICs. If you want to use a 40 GbE NIC as the receiver, use the `oct-u280` CloudLab profile. If you want to use a 100 GbE NIC as the receiver, still use the `oct-u280` profile, but switch to the `100g-nic` branch.
+
 ![plot](profile-100g.png)
 
 For this experiment, having one node is enough. This is because nodes in this profile come with both an FPGA and a NIC. However, if you want the sender and receiver on different nodes, you should use two nodes when creating the experiment.
